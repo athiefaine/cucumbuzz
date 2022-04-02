@@ -65,22 +65,17 @@ This stays less effective than a JUnit 5 parameterized test (unless you need to 
 ```java
 @ParameterizedTest(name = "FizzBuzz of {0} should be {1}")
 @CsvSource({
-     
        "1, 1",
-     
        "2, 2",
-     
        "3, Fizz",
-     
        "6, Fizz",
-     
        "5, Buzz",
-     
        "10, Buzz",
-     
        "15, FizzBuzz"
 })
 void fizzbuzz_should_be(int input, String result) {
     assertThat(FizzBuzz.of(input)).isEqualTo(result);
 }
    ```
+
+So, while using Cucumber comes with an additional cost, you should think about writing Gherkin scenarios and automating them when you have a real business complexity to describe.
